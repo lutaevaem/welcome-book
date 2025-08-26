@@ -1,0 +1,44 @@
+
+:root{
+  --bg: #0e0f1a;
+  --text: #f3f5ff;
+  --muted: #c9cbe2;
+  --line: rgba(255,255,255,.14);
+  --coral: #FF6F61;
+  --sea:   #17A2A4;
+  --chip: rgba(23,162,164,.12);
+}
+*{box-sizing:border-box}
+html,body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--sea);text-decoration:none}
+a:hover{text-decoration:underline}
+.muted{color:var(--muted)}
+.wb-container{max-width:1200px;margin:0 auto;padding:16px}
+.wb-header{position:sticky;top:0;z-index:20;backdrop-filter:blur(8px);
+  background:linear-gradient(180deg, rgba(23,162,164,.14), transparent);
+  border-bottom:1px solid var(--line);}
+.brand{font-weight:700;letter-spacing:.3px}
+.badge{background:var(--chip);border:1px solid rgba(23,162,164,.35);color:#c9feff;
+  border-radius:999px;padding:6px 10px;font-size:.9rem}
+.wb-tabs{display:flex;gap:8px;overflow:auto;padding:12px 0}
+.wb-tab{border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;background:transparent;color:var(--text);transition:all .25s ease}
+.wb-tab[aria-selected="true"]{background:linear-gradient(90deg, rgba(255,111,97,.22), rgba(23,162,164,.22));border-color:var(--sea)}
+.wb-tab:focus{outline:2px solid var(--coral); outline-offset:2px}
+.wb-controls{display:flex;gap:10px;align-items:center;justify-content:flex-end}
+.btn{border:1px solid var(--line);border-radius:12px;padding:8px 12px}
+.btn:hover{border-color:var(--coral)}
+.wb-main{display:block;padding-top:16px}
+.wb-panel{display:none}
+.wb-panel.active{display:grid;grid-template-columns:260px 1fr;gap:18px}
+@media (max-width:980px){.wb-panel.active{grid-template-columns:1fr}}
+.wb-side{border:1px dashed var(--line);border-radius:14px;padding:12px;position:sticky;top:78px;height:max-content}
+.wb-side ul{margin:10px 0 0 18px}
+.wb-side a{color:var(--muted)}
+.wb-side a:hover{color:#fff}
+.wb-unit{border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px;background:rgba(255,255,255,.03)}
+.wb-unit h3{margin:0 0 8px 0;color:#fff}
+.wb-unit p{line-height:1.6}
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
+@media (prefers-reduced-motion: reduce){ .reveal{transition:none} }
+.reveal.visible{opacity:1;transform:none}
+.footer{opacity:.85;padding:16px 0;border-top:1px solid var(--line);margin-top:16px}
