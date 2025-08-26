@@ -1,5 +1,5 @@
 
-:root{--brand-primary:#FF6F61;--brand-black:#0A0A0A;--brand-white:#fff;--brand-grey-1:#F4F6F8;--brand-grey-2:#E6E9EE;--brand-grey-3:#94A3B8;--radius:14px;--space-1:6px;--space-2:10px;--space-3:14px;--space-4:18px;--space-5:24px}
+:root{--brand-primary:#FF6F61;--brand-black:#0A0A0A;--brand-white:#FFFFFF;--brand-grey-1:#F4F6F8;--brand-grey-2:#E6E9EE;--brand-grey-3:#94A3B8;--radius:14px;--space-1:6px;--space-2:10px;--space-3:14px;--space-4:18px;--space-5:24px}
 html[data-theme="light"],:root{--bg:var(--brand-white);--text:#1B1E21;--muted:#5C6672;--line:rgba(0,0,0,.08);--chip:rgba(255,111,97,.10);--tab-grad:linear-gradient(90deg,rgba(255,111,97,.18),rgba(0,0,0,.06));--link:var(--brand-primary)}
 html[data-theme="dark"]{--bg:#0F1115;--text:#F2F5F9;--muted:#A9B4C2;--line:rgba(255,255,255,.14);--chip:rgba(255,111,97,.18);--tab-grad:linear-gradient(90deg,rgba(255,111,97,.22),rgba(255,255,255,.08));--link:var(--brand-primary)}
 *{box-sizing:border-box}html,body{background:var(--bg);color:var(--text);font-family:"DIN Pro","DINPro","DIN Next",Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
