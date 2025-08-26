@@ -14,7 +14,8 @@
     <nav class="wb-tabs" role="tablist" aria-label="Разделы">
       <button class="wb-tab" role="tab" id="tab-welcome" data-key="welcome" aria-controls="welcome" aria-selected="false">Добро пожаловать</button><button class="wb-tab" role="tab" id="tab-first-week" data-key="first-week" aria-controls="first-week" aria-selected="false">Первая неделя</button><button class="wb-tab" role="tab" id="tab-company-structure" data-key="company-structure" aria-controls="company-structure" aria-selected="false">Компания и структура</button><button class="wb-tab" role="tab" id="tab-work-comm" data-key="work-comm" aria-controls="work-comm" aria-selected="false">Рабочие процессы и коммуникации</button><button class="wb-tab" role="tab" id="tab-benefits" data-key="benefits" aria-controls="benefits" aria-selected="false">Льготы и оформление</button><button class="wb-tab" role="tab" id="tab-traditions" data-key="traditions" aria-controls="traditions" aria-selected="false">Традиции и жизнь компании</button><button class="wb-tab" role="tab" id="tab-products" data-key="products" aria-controls="products" aria-selected="false">Продукты и подход</button>
     </nav>
-    <div class="wb-controls"><a class="btn" href="WB.pdf" download>Скачать PDF</a></div>
+    <div class="wb-controls"><button id="themeTgl" class="btn" type="button">Тёмная тема</button> <a class="btn" href="WB.pdf" download>Скачать PDF</a></div>
+    
   </div>
 </header>
 <main class="wb-container wb-main">
@@ -641,5 +642,25 @@ document.addEventListener('DOMContentLoaded', ()=>{
   selectTab(location.hash?.substring(1) || 'welcome'); window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 });
 </script>
+
+<script>
+(function(){
+  const root = document.documentElement;
+  const key = 'wb-theme';
+  const saved = localStorage.getItem(key);
+  if(saved){ root.setAttribute('data-theme', saved); }
+  const btn = document.getElementById('themeTgl');
+  function applyLabel(){ btn.textContent = (root.getAttribute('data-theme')==='dark') ? 'Светлая тема' : 'Тёмная тема'; }
+  btn.addEventListener('click', ()=>{
+    const next = root.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem(key, next);
+    applyLabel();
+  });
+  if(!root.getAttribute('data-theme')){ root.setAttribute('data-theme','light'); }
+  applyLabel();
+})();
+</script>
+
 </body>
 </html>
