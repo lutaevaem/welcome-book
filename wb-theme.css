@@ -5,7 +5,7 @@
   --space-1: 6px; --space-2: 10px; --space-3: 14px; --space-4: 18px; --space-5: 24px;
 }
 *{box-sizing:border-box}
-html,body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+html,body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
 a{color:var(--sea);text-decoration:none} a:hover{text-decoration:underline} .muted{color:var(--muted)}
 .wb-container{max-width:1200px;margin:0 auto;padding:var(--space-4) var(--space-3)}
 .wb-header{position:sticky;top:0;z-index:20;backdrop-filter:blur(8px);background:linear-gradient(180deg, rgba(23,162,164,.14), transparent);border-bottom:1px solid var(--line)}
@@ -28,7 +28,7 @@ a{color:var(--sea);text-decoration:none} a:hover{text-decoration:underline} .mut
 .wb-unit{border:1px solid var(--line);border-radius:14px;padding:var(--space-4);margin-bottom:var(--space-4);background:rgba(255,255,255,.03)}
 .wb-unit h3{margin:0 0 var(--space-2) 0;color:#fff}
 .wb-unit h4{margin:var(--space-3) 0 var(--space-1); color:#eafcff; font-weight:600}
-.wb-unit p{margin: var(--space-2) 0}
+.wb-unit p{margin: var(--space-2) 0; hyphens:auto; overflow-wrap:anywhere}
 .wb-unit ul, .wb-unit ol{margin: var(--space-2) 0 var(--space-2) 1.2rem; padding:0}
 .wb-unit li{margin: 6px 0}
 .reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
